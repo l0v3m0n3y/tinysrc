@@ -10,7 +10,7 @@ class tinysrc {
                 method: 'POST',
                 headers: this.headers,
                 body: JSON.stringify(data),
-            }).then(res => res.text()).then(data => {resolve(data);
+            }).then(res => res.json()).then(data => {resolve(data);
             }).catch(err => reject(err));
         });
     }
